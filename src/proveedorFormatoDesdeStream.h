@@ -19,5 +19,4 @@ class ProveedorFormatoDesdeStream : public ProveedorFormato
 
 };
 
-
 #endif

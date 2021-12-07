@@ -21,7 +21,7 @@ int main() {
         // Configuración de la inyección de dependencias
         map<string, Operacion *> operaciones {};
 
-        std::ifstream ifs("formato.ini", std::ifstream::in);
+        std::ifstream ifs("../formato.ini", std::ifstream::in);
 
         if (!ifs.is_open())
         {

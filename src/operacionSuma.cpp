@@ -18,6 +18,7 @@ string OperacionSuma::Ejecute(string valor) {
     int conteoDatos = 1;
     while (datos >> dato)
     {
+        
         if(conteoDatos == 2){
             
             num1 = stoi(dato);
@@ -26,6 +27,7 @@ string OperacionSuma::Ejecute(string valor) {
             
             num2 = stoi(dato);
         }
+        
         conteoDatos++;
     }
     
