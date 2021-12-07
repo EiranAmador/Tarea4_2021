@@ -6,5 +6,6 @@ OperacionHola::OperacionHola(ProveedorFormato *proveedorFormato) {
 }
 
 string OperacionHola::Ejecute(string valor) {
+    
     return proveedorFormato->ObtenerFormato() + valor;
 }

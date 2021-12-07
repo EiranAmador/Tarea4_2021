@@ -3,6 +3,7 @@
 #include "procesadorInstrucciones.h"
 #include "identificadorOperaciones.h"
 #include "operacionHola.h"
+#include "operacionSuma.h"
 
 #include <iostream>
 #include <string>
@@ -33,13 +34,18 @@ int main() {
         OperacionHola *operacionHola = new OperacionHola(proveedorFormato);
         operaciones.insert(std::pair<string, Operacion *>("hola", operacionHola));
 
+        OperacionSuma *operacionSuma = new OperacionSuma(proveedorFormato);
+        operaciones.insert(std::pair<string, Operacion *>("suma", operacionSuma));
+
         IdentificadorOperacionesBase *identificadorOperaciones = new IdentificadorOperaciones(operaciones);
         // Fin de inicialización 
         
         ProcesadorInstrucciones *procesador = new ProcesadorInstrucciones(identificadorOperaciones);
-        string resultado = procesador->Procese("hola", "todos");
+        string resultadoHola = procesador->Procese("hola", "");
+        string resultadoSuma = procesador->Procese("suma", "");
 
-        cout << "Resultado: " << resultado << endl;
+        cout << "Resultado 'Hola': " << resultadoHola << endl;
+        cout << "Resultado 'Suma': " << resultadoSuma << endl;
 
         // Cerrar archivo de entrada
         ifs.close();
